@@ -103,6 +103,5 @@ if __name__ == "__main__":
 		]
 	)
 	msg = multilith.decode(f"{datetime.datetime.now().astimezone()}")
-	print(msg)
 	print(multilith.encode(msg))
 	#print(Monolith("0123456789", "5412098763"))
