@@ -12,6 +12,11 @@ class Monolith:
 		if values == None:
 			for item in keys:
 				self.chars[item] = item
+			
+			for i in range(int(len(keys) ** 1.5)):
+				x = random.choice(list(self.chars.keys()))
+				y = random.choice(list(self.chars.keys()))
+				self.chars[x], self.chars[y] = self.chars[y], self.chars[x]
 		else:
 			if len(keys) != len(values):
 				raise NameError("Key And Values, Size Inconistency")
@@ -30,14 +35,8 @@ class Monolith:
 				self.chars[keys[i]] = values[i]
 		pass
 			
-		for i in range(int(len(keys)**1.5)):
-			x = random.choice(list(self.chars.keys()))
-			y = random.choice(list(self.chars.keys()))
-			self.chars[x], self.chars[y] = self.chars[y], self.chars[x]
-		
 		for thing in self.chars:
 			self.reverseChars[self.chars[thing]] = thing
-	
 	
 	def __getitem__(self, x):
 		try:
@@ -105,4 +104,3 @@ if __name__ == "__main__":
 	msg = multilith.decode(f"{datetime.datetime.now().astimezone().isoformat()}")
 	print(msg)
 	print(multilith.encode(msg))
-	#print(Monolith("0123456789", "5412098763"))
