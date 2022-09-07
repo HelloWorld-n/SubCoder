@@ -102,6 +102,6 @@ if __name__ == "__main__":
 			Monolith("0123456789-+*×÷/|\\.,;:!?`~¡¿()[]{}<>《》▪︎¤ #ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz°•○●□■♤♡◇♧") for i in range(3)
 		]
 	)
-	msg = multilith.decode(f"{datetime.datetime.now().astimezone()}")
+	msg = multilith.decode(f"{datetime.datetime.now().astimezone().isoformat()}")
 	print(multilith.encode(msg))
 	#print(Monolith("0123456789", "5412098763"))
