@@ -105,7 +105,7 @@ if __name__ == "__main__":
 	
 	while True:
 		msg = multilith.decode(f"{datetime.datetime.now().astimezone().isoformat()}")
-		print(end = "\u001B[27J")
+		print(end = "\u001Bc")
 		print(msg)
 		print(multilith.encode(msg))
 		
