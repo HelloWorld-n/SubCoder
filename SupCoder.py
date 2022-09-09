@@ -99,7 +99,7 @@ class Multilith:
 if __name__ == "__main__":
 	multilith = Multilith(
 		[
-			Monolith("0123456789-+*×÷/|\\.,;:!?`~¡¿()[]{}<>《》▪︎¤ #ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz°•○●□■♤♡◇♧") for i in range(3)
+			Monolith("0123456789-+*×÷/|\\.,;:!?`~¡¿()[]{}<>▪︎¤ #ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz°•○●□■♤♡◇♧") for i in range(5)
 		]
 	)
 	
@@ -108,6 +108,4 @@ if __name__ == "__main__":
 		print(end = "\u001Bc")
 		print(msg)
 		print(multilith.encode(msg))
-		
 		time.sleep(1)
-		
