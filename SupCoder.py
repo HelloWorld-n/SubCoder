@@ -1,6 +1,7 @@
 #!/bin/python3
 import random
 import datetime
+import time
 
 class Monolith:
 	def __init__(self, keys, values=None):
@@ -101,6 +102,12 @@ if __name__ == "__main__":
 			Monolith("0123456789-+*×÷/|\\.,;:!?`~¡¿()[]{}<>《》▪︎¤ #ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz°•○●□■♤♡◇♧") for i in range(3)
 		]
 	)
-	msg = multilith.decode(f"{datetime.datetime.now().astimezone().isoformat()}")
-	print(msg)
-	print(multilith.encode(msg))
+	
+	while True:
+		msg = multilith.decode(f"{datetime.datetime.now().astimezone().isoformat()}")
+		print(end = "\u001B[27J")
+		print(msg)
+		print(multilith.encode(msg))
+		
+		time.sleep(1)
+		
